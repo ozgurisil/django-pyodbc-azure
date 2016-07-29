@@ -201,7 +201,7 @@ class DatabaseWrapper(BaseDatabaseWrapper):
                     ops[op] = '%s COLLATE %s' % (sql, collation)
             self.operators.update(ops)
 
-        self.features = DatabaseFeatures(self)
+        self.features = DatabaseFeatures(self, opts.get('supports_nullable_unique_constraints', False))
         self.ops = DatabaseOperations(self)
         self.client = DatabaseClient(self)
         self.creation = DatabaseCreation(self)
