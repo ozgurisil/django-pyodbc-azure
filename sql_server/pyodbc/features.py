@@ -34,3 +34,7 @@ class DatabaseFeatures(BaseDatabaseFeatures):
     supports_timezones = False
     supports_transactions = True
     uses_savepoints = True
+
+    def __init__(self, connection, supports_nullable_unique_constraints=False):
+        BaseDatabaseFeatures.__init__(self, connection)
+        self.supports_nullable_unique_constraints = supports_nullable_unique_constraints

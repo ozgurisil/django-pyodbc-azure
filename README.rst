@@ -193,6 +193,11 @@ Dictionary. Current available keys are:
    Integer. Sets the back off time in seconds for reries of
    the database connection process. Default value is ``5``.
 
+-  supports_nullable_unique_constraints
+
+   Boolean. Supports nullable unique constraints.
+   Default value is ``False``.
+
 backend-specific settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
